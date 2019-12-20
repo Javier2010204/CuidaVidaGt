@@ -1,0 +1,31 @@
+
+
+<h1>Enfermeras</h1>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Direccion</th>
+      <th>Tel 1</th>
+      <th>Tel 2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nurses.each do |nurse| %>
+      <tr>
+        <td><%= nurse.name %></td>
+        <td><%= nurse.age %></td>
+        <td><%= nurse.address %></td>
+        <td><%= nurse.phone_1 %></td>
+        <td><%= nurse.phone_2 %></td>
+        <td><%= link_to 'Ver mas...', nurse %></td>
+        <td><%= link_to 'Editar', edit_nurse_path(nurse) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

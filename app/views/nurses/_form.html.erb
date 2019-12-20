@@ -1,0 +1,47 @@
+<%= form_with(model: nurse, local: true) do |form| %>
+  <% if nurse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nurse.errors.count, "error") %> prohibited this nurse from being saved:</h2>
+
+      <ul>
+        <% nurse.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_1 %>
+    <%= form.number_field :phone_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_2 %>
+    <%= form.number_field :phone_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experience %>
+    <%= form.text_area :experience %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

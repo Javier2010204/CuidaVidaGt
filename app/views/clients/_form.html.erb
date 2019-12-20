@@ -1,0 +1,54 @@
+<%= form_with(model: @client, local: true, url: create_client_url) do |f| %>
+    <div class="form-group">
+        <%=f.label "nombre"%>
+        <%=f.text_field :name, class: "form-control"%>
+    </div>
+    <div class="form-group">
+        <%=f.label "telefono"%>
+        <%=f.number_field "telefono", class: "form-control form-control-sm"%>
+    </div>
+    <div class="">
+        <%=f.label "sexo"%>
+        <label> Masculino
+            <%= f.radio_button :sex, "M"%>
+        </label>
+        <label> Femenino
+            <%= f.radio_button :sex, "F"%>
+        </label>
+    </div>
+    <div class="">
+        <%=f.label "descripcion"%>
+        <%=f.text_area :description%>
+    </div>
+    <div class="">
+        <%=f.label "dias que necesita el servicio"%>
+        <label> Lunes a vierness
+            <%= f.radio_button :day, "lunes a viernes"%>
+        </label>
+        <label> Lunes a sabado
+            <%= f.radio_button :day, "lunes a sabado"%>
+        </label>
+        <label> Todos los dias
+            <%= f.radio_button :day, "todos los dias"%>
+        </label>
+    </div>
+    <div class="">
+        <%=f.label "Edad"%>
+        <%=f.number_field :age%>
+    </div>
+    <div class="">
+        <%=f.label "horarios laborales"%>
+        <label> Turnos de 24 horas
+            <%= f.radio_button :work_hour, "turnos de 24 horas"%>
+        </label>
+        <label> Dias: de 8:00 am a 5:00 pm
+            <%= f.radio_button :work_hour, "dias: de 8:00 am a 5:00 pm"%>
+        </label>
+        <label>Noches: de 6:00 pm a 7:00 am
+            <%= f.radio_button :work_hour, "noches: de 6:00 pm a 7:00 am"%>
+        </label>
+    </div>
+    <div class="">
+        <%=f.submit "Enviar"%>
+    </div>
+<% end %>

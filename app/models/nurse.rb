@@ -1,0 +1,3 @@
+class Nurse < ApplicationRecord
+    
+end

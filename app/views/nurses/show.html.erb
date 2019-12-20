@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @nurse.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @nurse.age %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @nurse.address %>
+</p>
+
+<p>
+  <strong>Phone 1:</strong>
+  <%= @nurse.phone_1 %>
+</p>
+
+<p>
+  <strong>Phone 2:</strong>
+  <%= @nurse.phone_2 %>
+</p>
+
+<p>
+  <strong>Experiencia:</strong>
+  <%= @nurse.experience %>
+</p>
+
+<p>
+  <strong>Disponibilidad:</strong>
+  <%= @nurse.availability %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @nurse.code %>
+</p>
+
+<p>
+  <strong>Pass:</strong>
+  <%= @nurse.pass %>
+</p>
+
+<%= link_to 'Edit', edit_nurse_path(@nurse) %> |
+<%= link_to 'Ver perfil', usuario_path(@nurse) %> |
+<%= link_to 'Back', nurses_path %>
